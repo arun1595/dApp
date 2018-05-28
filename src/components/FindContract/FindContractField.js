@@ -1,5 +1,9 @@
-import { Form, Input } from 'antd';
+import Form from 'antd/lib/form';
+import Input from 'antd/lib/input';
 import React from 'react';
+
+import 'antd/lib/form/style';
+import 'antd/lib/input/style';
 
 const FormItem = Form.Item;
 

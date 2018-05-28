@@ -1,10 +1,11 @@
 import React, { Component, Fragment } from 'react';
-
-import { Table, Row } from 'antd';
-
+import Table from 'antd/lib/table';
+import Row from 'antd/lib/row';
 import columns from './columns';
 import wallet from '../data/wallet';
 
+import 'antd/lib/table/style';
+import 'antd/lib/row/style';
 import './table.css';
 
 class BuyTable extends Component {

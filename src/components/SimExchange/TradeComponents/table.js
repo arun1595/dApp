@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-
-import { Table } from 'antd';
-
+import Table from 'antd/lib/table';
 import columns from '../columns';
+
+import 'antd/lib/table/style';
 
 import './table.css';
 

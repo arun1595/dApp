@@ -1,9 +1,20 @@
-import { Button, Col, Icon, Input, Row, Table } from 'antd';
+import Button from 'antd/lib/button';
+import Col from 'antd/lib/col';
+import Icon from 'antd/lib/icon';
+import Input from 'antd/lib/input';
+import Row from 'antd/lib/row';
+import Table from 'antd/lib/table';
 import moment from 'moment';
 import React, { Component } from 'react';
-
-import '../less/ContractsList.less';
 import Loader from './Loader';
+
+import 'antd/lib/button/style';
+import 'antd/lib/col/style';
+import 'antd/lib/icon/style';
+import 'antd/lib/input/style';
+import 'antd/lib/row/style';
+import 'antd/lib/table/style';
+import '../less/ContractsList.less';
 
 // Example Contract
 /* {

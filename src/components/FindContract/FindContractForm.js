@@ -1,9 +1,21 @@
-import { Button, Card, Col, Form, List, Row } from 'antd';
+import Button from 'antd/lib/button';
+import Card from 'antd/lib/card';
+import Col from 'antd/lib/col';
+import Row from 'antd/lib/row';
+import Form from 'antd/lib/form';
+import List from 'antd/lib/list';
 import React, { Component } from 'react';
 
 import Loader from '../Loader';
 import Field from './FindContractField';
 import FindContractSuccess from './FindContractSuccess';
+
+import 'antd/lib/button/style';
+import 'antd/lib/card/style';
+import 'antd/lib/col/style';
+import 'antd/lib/row/style';
+import 'antd/lib/form/style';
+import 'antd/lib/list/style';
 
 class FindContractForm extends Component {
   constructor(props) {

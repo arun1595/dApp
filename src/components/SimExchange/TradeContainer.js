@@ -2,10 +2,12 @@ import React, { Component, Fragment } from 'react';
 import Form from './TradeComponents/form';
 import Table from './TradeComponents/table';
 import _ from 'lodash';
-
-import { Modal, Table as AntTable } from 'antd';
-
+import AntTable from 'antd/lib/table';
+import Modal from 'antd/lib/modal';
 import columns from './columns';
+
+import 'antd/lib/table/style';
+import 'antd/lib/modal/style';
 
 class Buy extends Component {
   constructor(props) {

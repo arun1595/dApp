@@ -1,5 +1,9 @@
-import { Icon, message } from 'antd';
+import Icon from 'antd/lib/icon';
+import message from 'antd/lib/message';
 import React from 'react';
+
+import 'antd/lib/icon/style';
+import 'antd/lib/message/style';
 
 const iconStyle = {
   marginLeft: '16px',

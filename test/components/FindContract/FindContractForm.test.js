@@ -1,6 +1,6 @@
 import React from 'react';
-import { Form } from 'antd';
-import { List } from 'antd';
+import Form from 'antd/lib/form';
+import List from 'antd/lib/list';
 import { expect } from 'chai';
 import { mount } from 'enzyme';
 import sinon from 'sinon';
@@ -9,7 +9,9 @@ import FindContractForm from '../../../src/components/FindContract/FindContractF
 
 function validAddressFields() {
   return {
-    marketContractAddress: { value: '0xf204a4ef082f5c04bb89f7d5e6568b796096735a' }
+    marketContractAddress: {
+      value: '0xf204a4ef082f5c04bb89f7d5e6568b796096735a'
+    }
   };
 }
 
@@ -30,10 +32,12 @@ describe('FindContractForm', () => {
       showErrorMessage: errorMessageSpy,
       showSuccessMessage: successMessageSpy,
       onFindContract: onFindContractSpy,
-      validators: { ethAddressValidator: (rule, value, callback) => callback() },
-      wrappedComponentRef: (inst) => wrappedFormRef = inst
+      validators: {
+        ethAddressValidator: (rule, value, callback) => callback()
+      },
+      wrappedComponentRef: inst => (wrappedFormRef = inst)
     };
-    findContractForm = mount(<FindContractForm {...props}/>);
+    findContractForm = mount(<FindContractForm {...props} />);
   });
 
   it('should findContract when props.onFindContract is invoked', () => {
@@ -55,10 +59,12 @@ describe('FindContractForm', () => {
 
   it('should show List if contract is not empty', () => {
     findContractForm.setProps({
-      contract: [{
-        name: 'key',
-        value: '0x12345678123456781234567812345678'
-      }]
+      contract: [
+        {
+          name: 'key',
+          value: '0x12345678123456781234567812345678'
+        }
+      ]
     });
     expect(findContractForm.find(List)).to.have.length(1);
   });
@@ -84,15 +90,17 @@ describe('FindContractForm', () => {
   });
 
   it('should disable submit if fields have errors', () => {
-    wrappedFormRef.props.form.setFields({ marketContractAddress: {
-      value: '',
-      errors: [ new Error('Market Address is required.') ]
-    } });
+    wrappedFormRef.props.form.setFields({
+      marketContractAddress: {
+        value: '',
+        errors: [new Error('Market Address is required.')]
+      }
+    });
 
     findContractForm.setProps({
       loading: false
     });
-    
+
     const submitButton = findContractForm.find('.submit-button').first();
 
     expect(submitButton.prop('disabled')).to.equal(true);
@@ -100,7 +108,7 @@ describe('FindContractForm', () => {
 
   it('should reset form when .reset-button is clicked', () => {
     const defaultFieldValues = wrappedFormRef.props.form.getFieldsValue();
-    wrappedFormRef.props.form.setFields(validAddressFields());    
+    wrappedFormRef.props.form.setFields(validAddressFields());
     findContractForm.setProps({
       loading: false
     });
@@ -115,31 +123,43 @@ describe('FindContractForm', () => {
   it('should call onFindContract() with form values when submitted', () => {
     wrappedFormRef.props.form.setFields(validAddressFields());
 
-    findContractForm.find(Form).first().simulate('submit', { preventDefault() {} });
+    findContractForm
+      .find(Form)
+      .first()
+      .simulate('submit', { preventDefault() {} });
     expect(onFindContractSpy).to.have.property('callCount', 1);
   });
 
   it('should not call onFindContract() when form is invalid.', () => {
-    wrappedFormRef.props.form.setFields({ marketContractAddress: {
-      value: '',
-      errors: [ new Error('Market Address is required.') ]
-    } });
+    wrappedFormRef.props.form.setFields({
+      marketContractAddress: {
+        value: '',
+        errors: [new Error('Market Address is required.')]
+      }
+    });
 
-    findContractForm.find(Form).first().simulate('submit', { preventDefault() {} });
+    findContractForm
+      .find(Form)
+      .first()
+      .simulate('submit', { preventDefault() {} });
     expect(onFindContractSpy).to.have.property('callCount', 0);
   });
 
   it('should showSuccessMessage when contract is found', () => {
     findContractForm.setProps({ error: null, loading: true, contract: [] });
     expect(successMessageSpy).to.have.property('callCount', 0);
-    findContractForm.setProps({ error: null, loading: false, contract: {
-      key: '0x00000'
-    } });
+    findContractForm.setProps({
+      error: null,
+      loading: false,
+      contract: {
+        key: '0x00000'
+      }
+    });
     expect(successMessageSpy).to.have.property('callCount', 1);
   });
 
   it('should showErrorMessage is error is set', () => {
-    findContractForm.setProps({ error: null, loading: true});
+    findContractForm.setProps({ error: null, loading: true });
     expect(errorMessageSpy).to.have.property('callCount', 0);
     findContractForm.setProps({ error: 'Error occured', loading: false });
     expect(errorMessageSpy).to.have.property('callCount', 1);

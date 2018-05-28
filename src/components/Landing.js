@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import { Button, Col, Icon, Row } from 'antd';
+import Button from 'antd/lib/button';
+import Col from 'antd/lib/col';
+import Row from 'antd/lib/row';
+import Icon from 'antd/lib/icon';
 
 // Images
 import main from '../img/header-illustration.svg';
@@ -13,6 +16,10 @@ import simulateIcons from '../img/simulated-icons.svg';
 import WelcomeMessage from './WelcomeMessage';
 
 // Styles
+import 'antd/lib/button/style';
+import 'antd/lib/col/style';
+import 'antd/lib/row/style';
+import 'antd/lib/icon/style';
 import '../less/Landing.less';
 
 class LandingComponent extends Component {

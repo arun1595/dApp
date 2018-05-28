@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { InputNumber } from 'antd';
+import InputNumber from 'antd/lib/input-number';
 import { shallow } from 'enzyme';
 import sinon from 'sinon';
 import { expect } from 'chai';

@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
-import { Layout, Row, Col } from 'antd';
+import Layout from 'antd/lib/layout';
+import Row from 'antd/lib/row';
+import Col from 'antd/lib/col';
 
 import TradeContainer from './TradeContainer';
 
+import 'antd/lib/layout/style';
+import 'antd/lib/row/style';
+import 'antd/lib/col/style';
 import './Trades.css';
 
 const { Content } = Layout;

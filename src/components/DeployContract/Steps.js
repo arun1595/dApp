@@ -2,16 +2,29 @@
  * Steps for use by GuidedDeployment.
  *
  */
-import { Alert, Button, Card, Col, Form, Icon, Row } from 'antd';
+import Alert from 'antd/lib/alert';
+import Button from 'antd/lib/button';
+import Card from 'antd/lib/card';
+import Col from 'antd/lib/col';
+import Row from 'antd/lib/row';
+import Form from 'antd/lib/form';
+import Icon from 'antd/lib/icon';
 import moment from 'moment';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
 import Loader from '../Loader';
 import Field, { FieldSettings } from './DeployContractField';
 import DeployContractSuccess from './DeployContractSuccess';
 import GasPriceField from '../GasPriceField';
 import SelectTokenField from './SelectTokenField';
+
+import 'antd/lib/alert/style';
+import 'antd/lib/button/style';
+import 'antd/lib/card/style';
+import 'antd/lib/col/style';
+import 'antd/lib/row/style';
+import 'antd/lib/form/style';
+import 'antd/lib/icon/style';
 
 const ButtonGroup = Button.Group;
 

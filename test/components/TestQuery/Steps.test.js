@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button, Select, Input, InputNumber } from 'antd';
+import Button from 'antd/lib/button';
+import Select from 'antd/lib/select';
+import Input from 'antd/lib/input';
 import { shallow } from 'enzyme';
 import sinon from 'sinon';
 import { expect } from 'chai';

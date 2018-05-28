@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
-import { Steps } from 'antd';
+import Steps from 'antd/lib/steps';
 import { expect } from 'chai';
 import sinon from 'sinon';
 

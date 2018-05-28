@@ -1,12 +1,11 @@
-import {
-  DatePicker,
-  Form,
-  Icon,
-  Input,
-  InputNumber,
-  Select,
-  Popover
-} from 'antd';
+import DatePicker from 'antd/lib/date-picker';
+import Form from 'antd/lib/form';
+import Icon from 'antd/lib/icon';
+import Input from 'antd/lib/input';
+import InputNumber from 'antd/lib/input-number';
+import Select from 'antd/lib/select';
+import Popover from 'antd/lib/popover';
+
 import moment from 'moment';
 import React from 'react';
 import FormValidators from '../../util/forms/Validators';
@@ -15,6 +14,14 @@ import OracleDataSources, {
   getDataSourceObj
 } from '../TestQuery/OracleDataSources';
 import ExchangeSources from './ExchangeSources';
+
+import 'antd/lib/date-picker/style';
+import 'antd/lib/form/style';
+import 'antd/lib/icon/style';
+import 'antd/lib/input/style';
+import 'antd/lib/input-number/style';
+import 'antd/lib/select/style';
+import 'antd/lib/popover/style';
 
 const FormItem = Form.Item;
 const Option = Select.Option;

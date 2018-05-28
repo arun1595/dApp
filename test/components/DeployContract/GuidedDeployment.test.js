@@ -1,5 +1,5 @@
 import React from 'react';
-import { Steps } from 'antd';
+import Steps from 'antd/lib/steps';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import sinon from 'sinon';
@@ -24,7 +24,9 @@ describe('GuidedDeployment', () => {
   let onDeployContractSpy;
   beforeEach(() => {
     onDeployContractSpy = sinon.spy();
-    guidedDeployment = shallow(<GuidedDeployment onDeployContract={onDeployContractSpy}/>);
+    guidedDeployment = shallow(
+      <GuidedDeployment onDeployContract={onDeployContractSpy} />
+    );
   });
 
   it('should render 5 steps', () => {
@@ -63,15 +65,18 @@ describe('GuidedDeployment', () => {
   });
 
   it('should reset to inital step', () => {
-    guidedDeployment.setState({step: deployStep});
-    guidedDeployment.setProps({error: "Without data"});
+    guidedDeployment.setState({ step: deployStep });
+    guidedDeployment.setProps({ error: 'Without data' });
     guidedDeployment.find(DeployStep).simulate('failSubmit');
     expect(guidedDeployment.state('step')).to.equal(0);
   });
 
   it('should called onDeployContract when DeployStep.deployContract', () => {
     guidedDeployment.setState({ step: deployStep });
-    guidedDeployment.find(DeployStep).props().deployContract();
+    guidedDeployment
+      .find(DeployStep)
+      .props()
+      .deployContract();
     expect(onDeployContractSpy).to.have.property('callCount', 1);
   });
 });

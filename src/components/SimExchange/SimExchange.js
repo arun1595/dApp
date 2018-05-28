@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
-import { Layout, Menu } from 'antd';
+import Layout from 'antd/lib/layout';
+import Menu from 'antd/lib/menu';
 import { Route, Redirect, Switch, withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 
 import TopBar from './TopBar';
 import Trades from './Trades';
 import Wallet from './Wallet';
+
+import 'antd/lib/layout/style';
+import 'antd/lib/menu/style';
 
 const { Content, Header, Sider } = Layout;
 

@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
-
-import { Card, Row, Modal, Col } from 'antd';
-
+import Card from 'antd/lib/card';
+import Row from 'antd/lib/row';
+import Col from 'antd/lib/col';
+import Modal from 'antd/lib/modal';
 import Form from './Form';
 
+import 'antd/lib/card/style';
+import 'antd/lib/row/style';
+import 'antd/lib/col/style';
+import 'antd/lib/modal/style';
 import './header-menu.css';
 
 class HeaderMenu extends Component {

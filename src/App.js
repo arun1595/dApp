@@ -1,11 +1,10 @@
-import { Layout } from 'antd';
+import Layout from 'antd/lib/layout';
 import React, { Component } from 'react';
 import { Route, Router } from 'react-router';
-
 import Header from './components/Header';
-
 import { routes } from './routes';
 
+import 'antd/lib/layout/style';
 import './less/App.less';
 
 const { Footer, Content } = Layout;

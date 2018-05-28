@@ -2,7 +2,8 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { expect } from 'chai';
 
-import { Modal, Icon } from 'antd';
+import Modal from 'antd/lib/modal';
+import Icon from 'antd/lib/icon';
 
 import WelcomeMessage, { title } from '../../src/components/WelcomeMessage';
 import ReactDOM from 'react-dom';

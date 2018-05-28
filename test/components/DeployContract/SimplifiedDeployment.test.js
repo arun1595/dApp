@@ -1,5 +1,5 @@
 import React from 'react';
-import { Steps } from 'antd';
+import Steps from 'antd/lib/steps';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import sinon from 'sinon';

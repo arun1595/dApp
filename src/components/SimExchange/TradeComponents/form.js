@@ -1,5 +1,13 @@
 import React, { Component } from 'react';
-import { Form, Input, Card, Button } from 'antd';
+import Form from 'antd/lib/form';
+import Input from 'antd/lib/input';
+import Card from 'antd/lib/card';
+import Button from 'antd/lib/button';
+
+import 'antd/lib/form/style';
+import 'antd/lib/input/style';
+import 'antd/lib/card/style';
+import 'antd/lib/button/style';
 
 const FormItem = Form.Item;
 

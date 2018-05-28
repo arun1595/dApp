@@ -1,10 +1,27 @@
-import { Alert, Button, Card, Col, Form, Icon, Input, Row, Select } from 'antd';
+import Alert from 'antd/lib/alert';
+import Button from 'antd/lib/button';
+import Card from 'antd/lib/card';
+import Col from 'antd/lib/col';
+import Form from 'antd/lib/form';
+import Icon from 'antd/lib/icon';
+import Input from 'antd/lib/input';
+import Row from 'antd/lib/row';
+import Select from 'antd/lib/select';
 import React, { Component } from 'react';
-
 import Loader from '../Loader';
 import '../../less/Step.less';
 import OracleDataSources, { getDataSourceObj } from './OracleDataSources';
 import GasPriceField from '../GasPriceField';
+
+import 'antd/lib/alert/style';
+import 'antd/lib/button/style';
+import 'antd/lib/card/style';
+import 'antd/lib/col/style';
+import 'antd/lib/form/style';
+import 'antd/lib/icon/style';
+import 'antd/lib/input/style';
+import 'antd/lib/row/style';
+import 'antd/lib/select/style';
 
 const FormItem = Form.Item;
 const Option = Select.Option;

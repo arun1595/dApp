@@ -1,7 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import moment from 'moment';
-import { Alert, Button, Form, Input, InputNumber } from 'antd';
+import Alert from 'antd/lib/alert';
+import Button from 'antd/lib/button';
+import Form from 'antd/lib/form';
+import Input from 'antd/lib/input';
+import InputNumber from 'antd/lib/input-number';
 import { mount, shallow } from 'enzyme';
 import { expect } from 'chai';
 import sinon from 'sinon';

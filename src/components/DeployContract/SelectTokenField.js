@@ -1,6 +1,14 @@
-import { Form, Icon, Select, Popover } from 'antd';
+import Form from 'antd/lib/form';
+import Icon from 'antd/lib/icon';
+import Select from 'antd/lib/select';
+import Popover from 'antd/lib/popover';
 import React from 'react';
 import { getExchangeObj } from './ExchangeSources';
+
+import 'antd/lib/form/style';
+import 'antd/lib/icon/style';
+import 'antd/lib/select/style';
+import 'antd/lib/popover/style';
 
 const FormItem = Form.Item;
 const Option = Select.Option;

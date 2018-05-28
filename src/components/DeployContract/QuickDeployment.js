@@ -1,10 +1,22 @@
-import { Alert, Button, Col, Form, Row, Spin } from 'antd';
+import Alert from 'antd/lib/alert';
+import Button from 'antd/lib/button';
+import Col from 'antd/lib/col';
+import Form from 'antd/lib/form';
+import Row from 'antd/lib/row';
+import Spin from 'antd/lib/spin';
 import React, { Component } from 'react';
 
 import Loader from '../Loader';
 import Field from './DeployContractField';
 import DeployContractSuccess from './DeployContractSuccess';
 import GasPriceField from '../GasPriceField';
+
+import 'antd/lib/alert/style';
+import 'antd/lib/button/style';
+import 'antd/lib/col/style';
+import 'antd/lib/form/style';
+import 'antd/lib/row/style';
+import 'antd/lib/spin/style';
 
 const formButtonLayout = {
   xs: {

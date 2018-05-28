@@ -1,5 +1,9 @@
 import React from 'react';
-import { Button, Popover } from 'antd';
+import Button from 'antd/lib/button';
+import Popover from 'antd/lib/popover';
+
+import 'antd/lib/button/style';
+import 'antd/lib/popover/style';
 
 export default [
   {

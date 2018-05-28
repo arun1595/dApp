@@ -1,11 +1,15 @@
-import { Col, Row, Steps } from 'antd';
+import Col from 'antd/lib/col';
+import Row from 'antd/lib/row';
+import Steps from 'antd/lib/steps';
 import React, { Component } from 'react';
-
 import StepAnimation from '../StepAnimation';
 import { DeployStep, ExpirationStep, ExchangeStep, PricingStep } from './Steps';
-
 import showMessage from '../message';
 import { getBaseTokenAddress } from '../../util/utils';
+
+import 'antd/lib/col/style';
+import 'antd/lib/row/style';
+import 'antd/lib/steps/style';
 
 const Step = Steps.Step;
 

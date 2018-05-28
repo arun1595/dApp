@@ -1,8 +1,20 @@
-import { Col, Form, Icon, InputNumber, Row, Popover } from 'antd';
+import Icon from 'antd/lib/icon';
+import InputNumber from 'antd/lib/input-number';
+import Col from 'antd/lib/col';
+import Row from 'antd/lib/row';
+import Form from 'antd/lib/form';
+import Popover from 'antd/lib/popover';
 import React, { Component } from 'react';
 import Rx from 'rxjs/Rx';
 
 import { isTestnetOrMainnet } from '../util/utils';
+
+import 'antd/lib/icon/style';
+import 'antd/lib/input-number/style';
+import 'antd/lib/col/style';
+import 'antd/lib/row/style';
+import 'antd/lib/form/style';
+import 'antd/lib/popover/style';
 
 const FormItem = Form.Item;
 

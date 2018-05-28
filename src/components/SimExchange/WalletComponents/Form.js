@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
-import { Form as AntForm, Input, Button } from 'antd';
+import AntForm from 'antd/lib/form';
+import Input from 'antd/lib/input';
+import Button from 'antd/lib/button';
+
+import 'antd/lib/form/style';
+import 'antd/lib/input/style';
+import 'antd/lib/button/style';
 
 const FormItem = AntForm.Item;
 

@@ -1,4 +1,7 @@
-import { Col, Row, Steps } from 'antd';
+import Col from 'antd/lib/col';
+import Row from 'antd/lib/row';
+import Steps from 'antd/lib/steps';
+
 import React, { Component } from 'react';
 
 import StepAnimation from '../StepAnimation';
@@ -11,6 +14,9 @@ import {
   PricingStep
 } from './Steps';
 
+import 'antd/lib/col/style';
+import 'antd/lib/row/style';
+import 'antd/lib/steps/style';
 const Step = Steps.Step;
 
 const parentColLayout = {

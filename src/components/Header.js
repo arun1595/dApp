@@ -1,9 +1,12 @@
-import { Affix, Menu } from 'antd';
+import Affix from 'antd/lib/affix';
+import Menu from 'antd/lib/menu';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
 import logo from '../img/market-logo-white.png';
 import '../less/Header.less';
+
+import 'antd/lib/affix/style';
+import 'antd/lib/menu/style';
 
 const SubMenu = Menu.SubMenu;
 const MenuItem = Menu.Item;

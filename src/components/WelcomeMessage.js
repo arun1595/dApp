@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
-import { Button, Modal, Icon } from 'antd';
+import Button from 'antd/lib/button';
+import Modal from 'antd/lib/modal';
+import Icon from 'antd/lib/icon';
+
+import 'antd/lib/button/style';
+import 'antd/lib/modal/style';
+import 'antd/lib/icon/style';
 
 export const title = 'Welcome to the official MARKET Protocol dApp';
 
