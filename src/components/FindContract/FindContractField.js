@@ -6,10 +6,6 @@ const FormItem = Form.Item;
 const getFieldSettings = validators => ({
   rules: [
     {
-      required: true,
-      message: 'Please enter MARKET contract address'
-    },
-    {
       validator: validators.ethAddressValidator
     }
   ]
